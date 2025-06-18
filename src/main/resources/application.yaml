@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: SocialAuthApp
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: mysql
+    open-in-view: false
+  datasource:
+    hikari:
+      pool-name: SourceConnectionPool
+      minimum-idle: 10
+      maximum-pool-size: 20
+      idle-timeout: 60000 # 1분
+      connection-timeout: 30000 # 30초
+    url: jdbc:mysql://localhost:3306/social_auth?useUnicode=true&serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: authdev
+    password: authdev
