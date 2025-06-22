@@ -9,6 +9,7 @@ import lombok.ToString;
 @Entity
 @Getter
 @ToString
+@Table(name = "employee")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Employee {
 
@@ -25,4 +26,12 @@ public class Employee {
 
     @Column(name = "department_id")
     private Long departmentId;
+
+    public static Employee create(String firstName, String lastName, Long departmentId) {
+        Employee employee = new Employee();
+        employee.firstName = firstName;
+        employee.lastName = lastName;
+        employee.departmentId = departmentId;
+        return employee;
+    }
 }

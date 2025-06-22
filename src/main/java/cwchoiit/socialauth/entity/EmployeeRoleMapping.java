@@ -6,21 +6,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
 @Getter
+@Entity
 @ToString
-@Table(name = "department")
+@Table(name = "employee_role_mapping")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Department {
+public class EmployeeRoleMapping {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "department_id")
-    private Long departmentId;
+    private Long id;
 
-    @Column(name = "dept_name")
-    private String deptName;
+    @Column(name = "employee_id")
+    private Long employeeId;
 
-    @Column(name = "team_lead_id")
-    private Long teamLeadId;
+    @Column(name = "role_id")
+    private Long roleId;
 }

@@ -9,18 +9,15 @@ import lombok.ToString;
 @Entity
 @Getter
 @ToString
-@Table(name = "department")
+@Table(name = "role")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Department {
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "department_id")
-    private Long departmentId;
+    @Column(name = "role_id")
+    private Long roleId;
 
-    @Column(name = "dept_name")
-    private String deptName;
-
-    @Column(name = "team_lead_id")
-    private Long teamLeadId;
+    @Column(name = "name")
+    private String name;
 }

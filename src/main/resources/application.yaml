@@ -17,3 +17,6 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: authdev
     password: authdev
+kakao:
+  rest-api-key: f090de38388597071624f22a1a463e35
+  redirect-uri: http://localhost:8080/api/v1/oauth/kakao/callback
